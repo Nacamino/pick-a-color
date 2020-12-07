@@ -1,0 +1,81 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: gray;
+}
+
+.main-container .hexC {
+  position: absolute;
+  right: 0px;
+  width: 10%;
+  height: 5%;
+  border-bottom-left-radius: 10px;
+  content: "";
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+}
+
+.main-container .rgb {
+  border-radius: 10px;
+  display: block;
+  position: absolute;
+  margin: 2%;
+  width: 20%;
+  border: 5px solid #7e7171;
+  padding: 1% 2.5%;
+}
+
+.main-container .rgb .demo {
+  width: 15%;
+  height: 20%;
+  background-color: #e4e4e4;
+  font-size: .8em;
+  text-align: center;
+  content: '';
+  position: absolute;
+  border-radius: 10px;
+  margin-left: -10%;
+  margin-top: 1%;
+}
+
+.main-container .rgb input[type=range] {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: 10%;
+}
+
+.main-container .rgb input[type=range]::-webkit-slider-thumb {
+  border: 1px solid black;
+  -webkit-appearance: none;
+          appearance: none;
+  margin-top: -3px;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+.main-container .rgb input[type=range]::-webkit-slider-runnable-track {
+  height: 8px;
+}
+
+.main-container .display2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=index.css.map */
