@@ -16,7 +16,7 @@
 <body>
   <div class="main-container">
     <span class="hexC" id="hexC"></span>
-    <div id="display" class="rgb">
+    <div id="rgb" class="rgb">
       <span class="demo" id="span1"></span>
       <input class="slider red"  step="1" id="red-bar" type="range" min="0" max="255" value="128">
       <span class="demo" id="span2"></span>
@@ -25,12 +25,22 @@
       <input class="slider blue"  step="1" id="blue-bar" type="range" min="0" max="255" value="128">
     </div>
     <div class="imagen">
-        <input type="file"  onchange="picture.init()" class="img" id="img">   
+        <label for="img">
+          <input type="file"  onchange="picture.init()" class="img" id="img">
+          <span class="file">
+            <i class="fas fa-image"></i>
+          </span>
+        </label>   
     </div>
     <div class="display2">
       <img height="400px" id="pictures">
       <canvas  id= "cv"  ></canvas>
+      
     </div>
+    <div class="preview" id="preview">
+      
+    </div>
+   
     
  
     

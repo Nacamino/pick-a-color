@@ -5,6 +5,7 @@ const drawImage=(canvas,img,callback)=>{
     canvas.getContext('2d').drawImage(img, 0, 0, img.width , img.height);
     
     return callback(), console.log("listo")
+
 }
 
 
@@ -16,6 +17,7 @@ function hexCode(c) {
   function rgbToHex(r, g, b) { 
     return  "#"+hexCode(r)+""+hexCode(g)+""+hexCode(b)+"";
   };
+var preview = document.getElementById("preview")
 var imgs = document.getElementById("pictures");  
 var fondo = document.body; 
 var x = "";
@@ -35,6 +37,7 @@ class Picture{
         this.showColor()
         
     }
+    
   
     showColor(){      
         imgs.addEventListener('click',(e)=>{
@@ -46,7 +49,23 @@ class Picture{
                 
             var data=cv.getContext("2d").getImageData(x, y, 1, 1 ).data; 
             hexC.innerHTML= rgbToHex((data[0]),(data[1]),(data[2]));
-            document.body.style.background= "rgb("+data[0]+", "+data[1]+", "+data[2]+")"   
+            document.body.style.background= "rgb("+data[0]+", "+data[1]+", "+data[2]+")"
+            
+         },false)
+        });
+        imgs.addEventListener('mousemove',(e)=>{
+            if(e.offsetX){
+                x= e.offsetX
+                y=e.offsetY
+            }
+            imgs.onload=drawImage(cv,imgs,()=>{
+                
+            var data=cv.getContext("2d").getImageData(x, y, 1, 1 ).data; 
+            preview.style.backgroundColor = "rgb("+data[0]+", "+data[1]+", "+data[2]+")";
+            preview.style.display= "block"
+
+            
+            
          },false)
         })
     }
@@ -57,14 +76,18 @@ class Picture{
 
         reader.onloadend = function () {
         imgs.src = reader.result;
+        imgs.style.border= "5px solid white"  
         }
 
         if (file) {
         reader.readAsDataURL(file);
         } else {
         imgs.src = "";
+         
         }
         cv.style.display= "none"
+        
+       
     }
 }
 var picture = new Picture();

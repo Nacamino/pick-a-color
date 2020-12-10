@@ -51,21 +51,21 @@ var input = document.querySelectorAll("input")
 
 const color=(color)=>{
   var rgb= color.value
-  if (rgb == 0 ){
-    return (rgb + 50) 
+  if (rgb > 100 ){
+    return (rgb = 50 ) 
   }
-  else {
-    return (rgb - 50)
-  }
+
+ //cambiar despues cuando haga diseño-
+  
 };
 
 for( var i=0; i< input.length;i++){
   input[i].addEventListener("input", function(){
-    var display = document.getElementById("display")
-    display.style.border= "5px solid rgb("+color(red) +", "+color(green) +", "+color(blue) +", 0.5 )"
+    var rgb = document.getElementById("rgb")
+    rgb.style.border= "5px solid rgb("+color(red) +", "+color(green) +", "+color(blue) +",0.5 )"
     document.body.style.background= "rgb("+red.value+", "+green.value+", "+blue.value+")"
     hexC.innerHTML= rgbToHex(parseInt(red.value),parseInt(green.value),parseInt(blue.value))
-    document.getElementById("hexC").style.background="rgb("+color(red) +", "+color(green) +", "+color(blue) +")" 
+    document.getElementById("hexC").style.background="rgb("+color(red) +", "+color(green) +", "+color(blue) +",0.5)" 
   })
 }
 
