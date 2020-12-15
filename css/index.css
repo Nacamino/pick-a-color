@@ -71,7 +71,8 @@ body {
 }
 
 .main-container .rgb input[type=range]::-webkit-slider-runnable-track {
-  height: 8px;
+  height: 1.5vh;
+  width: 1.5vw;
 }
 
 .main-container .imagen {

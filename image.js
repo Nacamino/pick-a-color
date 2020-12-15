@@ -7,16 +7,7 @@ const drawImage=(canvas,img,callback)=>{
     return callback(), console.log("listo")
 
 }
-
-
-function hexCode(c) {
-    var hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
-  };
-  
-  function rgbToHex(r, g, b) { 
-    return  "#"+hexCode(r)+""+hexCode(g)+""+hexCode(b)+"";
-  };
+   
 var preview = document.getElementById("preview")
 var imgs = document.getElementById("pictures");  
 var fondo = document.body; 
@@ -49,8 +40,10 @@ class Picture{
                 
             var data=cv.getContext("2d").getImageData(x, y, 1, 1 ).data; 
             hexC.innerHTML= rgbToHex((data[0]),(data[1]),(data[2]));
-            document.body.style.background= "rgb("+data[0]+", "+data[1]+", "+data[2]+")"
-            
+            document.body.style.background= "rgb("+data[0]+", "+data[1]+", "+data[2]+")";
+            changeValue(red,'linear-gradient(to right, #ff5739 0%, #ff5739 ' +  red.value / 2.55 + '%,  white 0%)', data[0], output1);
+            changeValue(green,'linear-gradient(to right, #69c33b 0%, #69c33b ' + green.value / 2.55 + '%,  white 0%)',data[1], output2)
+            changeValue(blue,'linear-gradient(to right, #41a5ff 0%, #41a5ff ' + blue.value / 2.55 + '%,  white 0%)', data[2], output3)
          },false)
         });
         imgs.addEventListener('mousemove',(e)=>{
