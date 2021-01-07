@@ -1,3 +1,4 @@
+@import "colors";
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +7,8 @@
   body{
     background-color: rgb(128, 128, 128);
   }
-  .main-container{
+  .main_container{
+    
     
     .hexC{
       position: absolute;
@@ -20,7 +22,7 @@
       color: white;
       margin: 20px;
       padding: 2px;
-
+      
 
     }
    .rgb{
@@ -29,8 +31,9 @@
     position: absolute;
     margin: 2%;
     width: 20%;
-    border: 5px solid rgb(126, 113, 113) ;
+    border: 5px solid rgb(0, 0, 0) ;
     padding: 1% 2.5%;
+    background-color: white;
     
     .demo{
       width: 15%;
@@ -60,10 +63,9 @@
       border: 1px solid rgb(0, 0, 0);
       appearance: none;
       margin-top: -3px;
-      height: 15px;
-      width: 15px;
+      height: 10%;
+      width: 10%;
       background-color: rgb(255, 255, 255);
-      
       border-radius: 50%;
       opacity: 1; 
       
@@ -71,6 +73,8 @@
       &::-webkit-slider-runnable-track{
         height:  1.5vh;
         width: 1.5vw;
+        border: 1px solid black;
+        border-radius: 20px;
         
       }
       
@@ -78,9 +82,21 @@
       
     }
     
-      
+    //  .red::-webkit-slider-runnable-track{
+    //    background-image: linear-gradient(to right, $rojo 50%,  white 50%);
+    //    border-radius: 10px ;
+       
+    //  }
+    //  .green::-webkit-slider-runnable-track{
+    //   background-image: linear-gradient(to right, $green 50%,  white 50%);
+    //   border-radius: 10px
+    // }
+    // .blue::-webkit-slider-runnable-track{
+    //   background-image: linear-gradient(to right, $blue 50%,  white 50%);
+    //   border-radius: 10px
+    // }
     }
-    .imagen{
+    .imagen_input{
       position: absolute;
       top: 105px;
       left: 20px;
@@ -115,39 +131,131 @@
           border-radius: 5px;
           font-size: 1.2em;
       }
+
+      .clean{
+        position: relative;
+        top: 1.5vw;
+        left: 6vw;
+        width: 2vw;
+        height: 3vh;
+
+      }
+      .random{
+        position: relative;
+        top: 1.5vw;
+        left: 8vw;
+        width: 2vw;
+        height: 3vh;
+  
+      }
     }
+
     .display2{
       
-      img {
+      .image{
       cursor: crosshair;
       margin: 1% 2% ;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
+      height: 400px;
       transform: translate(-50%,-50%);
       }
-      
+      .image_open{
+        border: 5px solid white   
+      }
     
     }
     .preview {
-      border-radius:50% ;
+      
       border:  5px solid white;
       position: absolute;
       bottom: 20px;
       right: 20px;
-      width: 9%;
-      height: 14%;
+      width: 50px;
+      height: 50px;
       margin: 10px 10px;
       background-color: black;
       display: none;
+     
+    }
+    .preview_visible{
+      display: block;
+    }
+    .library{
+      position: fixed;
+      left: 1em;
+      bottom: 1em;
+      height: 40px;
+      max-width: 60vw;
+    }
+    // .library {
+    // //   position: absolute;
+    // //   top: 30%;
+    // //   left: 2.3%;
+    // //   overflow: scroll;
+    // //   max-height: 50%;
+    // //   max-width: 19.5%;
+    // //   background-color: rgba(5, 5, 65, 0.568);
+    // //   border-radius: 5px;
+      
+    // //   &::-webkit-scrollbar{
+    // //    width: 1vw;
+    // //    height: 1vh;
+       
+    // //   }
+    // //   &::-webkit-scrollbar-thumb{
+    // //     background-color:rgba(5, 5, 65, 0.568);
+    // //    border-radius: 5px;
+    // //    border: 1px solid black
+        
+    // //   }
+    // // &::-webkit-scrollbar-thumb:active,
+    // // &::-webkit-scrollbar-thumb:hover {
+    // //     background-color: rgba(5, 5, 65, 0.856);
+    // // }
+    // // &::-webkit-scrollbar-track {
+    // //   background-color: transparent;
+      
+    // }
+    .color{
+      width: 25px;
+      height: 25px;
+      border: 3px solid white;
+      display: inline-block;
+      position: relative;
+      transition: all .3s ease;
+      &:not(:last-child){
+          margin-right: 5px;
+      }
+
+    }
+    .item{
+      color: white;
+      padding: 5px;
+      text-align: left;
+      display: block;
       
     }
-    
+   
    
     
    
   } 
 
+.container_none{
+  animation: disappear .5s  ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes disappear{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 
 
 

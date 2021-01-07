@@ -15,8 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&;800display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="main-container">
-    <span class="hexC" id="hexC"></span>
+  <div class="main_container" id="main_container">
+    <div  class="hexC" id="hexC"></div>
     <div id="rgb" class="rgb">
       <span class="demo" id="span1"></span>
       <input class="slider red"  step="1" id="red-bar" type="range" min="0" max="255" value="128">
@@ -25,29 +25,38 @@
       <span class="demo" id="span3"></span>
       <input class="slider blue"  step="1" id="blue-bar" type="range" min="0" max="255" value="128">
     </div>
-    <div class="imagen">
+    <div class="imagen_input">
         <label for="img">
-          <input type="file"  onchange="picture.init()" class="img" id="img">
+          <input type="file"   class="img" id="img">
           <span class="file">
             <i class="fas fa-image"></i>
           </span>
         </label>   
+       
+        <button class="clean" id="clean">o</button>
+        <button class="random" id="random">random</button>
     </div>
+
     <div class="display2">
-      <img height="400px" id="pictures">
-      <canvas  id= "cv"  ></canvas>
+      <img id="image" class="image" >
+      <canvas   id= "cv"  style="display: none;"></canvas>
       
     </div>
     <div class="preview" id="preview">
-      
     </div>
-   
+    <div class="library" id="library">
+     
+    </div> 
+  
+    
+ 
     
  
     
 
   </div>
-  <script src="image.js"></script>
-<script src="slider.js"></script>
+  <script src="utilities.js"></script>
+  <script src="library.js"> </script>
+<script src="colorpicker.js"></script>
 </body>
 </html>
