@@ -1,3 +1,9 @@
+.main_container .imagen_input .clean, .main_container .imagen_input .random {
+  left: 1.3vw;
+  width: 5vw;
+  height: 4.6vh;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -21,30 +27,32 @@ body {
   color: white;
   margin: 20px;
   padding: 2px;
+  background-color: rgba(0, 0, 0, 0.281);
 }
 
 .main_container .rgb {
-  border-radius: 10px;
   display: block;
   position: absolute;
   margin: 2%;
   width: 20%;
-  border: 5px solid black;
-  padding: 1% 2.5%;
+  height: 13.5%;
+  border: 1px solid black;
+  padding: 1.5% 2.5%;
   background-color: white;
+  border-radius: 10px 0 0 10px;
 }
 
 .main_container .rgb .demo {
   width: 15%;
   height: 20%;
-  background-color: #e4e4e4;
+  background-color: white;
   font-size: .8em;
   text-align: center;
   content: '';
   position: absolute;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-left: -10%;
-  margin-top: 1%;
+  margin-top: -1%;
   border: 1px solid black;
 }
 
@@ -57,31 +65,30 @@ body {
   cursor: pointer;
   border-radius: 20px;
   margin-left: 10%;
+  border: 1px solid black;
 }
 
 .main_container .rgb input[type=range]::-webkit-slider-thumb {
   border: 1px solid black;
   -webkit-appearance: none;
           appearance: none;
-  margin-top: -3px;
-  height: 10%;
-  width: 10%;
+  margin-top: -4px;
+  height: 17px;
+  width: 17px;
   background-color: white;
   border-radius: 50%;
   opacity: 1;
 }
 
 .main_container .rgb input[type=range]::-webkit-slider-runnable-track {
-  height: 1.5vh;
-  width: 1.5vw;
-  border: 1px solid black;
-  border-radius: 20px;
+  height: 1.6vh;
+  width: 1.6vw;
 }
 
 .main_container .imagen_input {
-  position: absolute;
-  top: 105px;
-  left: 20px;
+  position: fixed;
+  top: 1vh;
+  left: 21vw;
 }
 
 .main_container .imagen_input .label {
@@ -102,33 +109,41 @@ body {
 
 .main_container .imagen_input .file {
   cursor: pointer;
-  width: 30px;
-  height: 30px;
-  left: 0;
-  top: 0px;
+  left: 1.3vw;
+  top: 1.3vw;
   position: absolute;
-  border-radius: 2px;
-  margin: 10px;
+  border: 1px solid black;
   padding-top: 6px;
   text-align: center;
-  border-radius: 5px;
-  font-size: 1.2em;
+  font-size: 1em;
+  height: 4.7vh;
+  width: 5vw;
+  border-top-right-radius: 10px;
+  color: #ff5739;
 }
 
 .main_container .imagen_input .clean {
-  position: relative;
-  top: 1.5vw;
-  left: 6vw;
-  width: 2vw;
-  height: 3vh;
+  position: absolute;
+  top: 4.1vw;
 }
 
 .main_container .imagen_input .random {
-  position: relative;
-  top: 1.5vw;
-  left: 8vw;
-  width: 2vw;
-  height: 3vh;
+  position: absolute;
+  top: 6.8vw;
+  border-bottom-right-radius: 10px;
+}
+
+.main_container .imagen_input .botones {
+  margin-left: -5px;
+  background-color: white;
+  outline: none;
+  border-left: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.main_container .imagen_input .botones:hover {
+  background-color: rgba(255, 255, 255, 0.582);
 }
 
 .main_container .display2 .image {

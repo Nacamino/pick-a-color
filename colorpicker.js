@@ -168,9 +168,7 @@ class ColorPicker{
         this.sliderR.value = this.r
         this.sliderG.value = this.g
         this.sliderB.value = this.b
-        this.sliderR.style.background= 'linear-gradient(to right, #ff5739 0%, #ff5739 ' +  r/ 2.55 + '%,  white 0%)';
-        this.sliderG.style.background= 'linear-gradient(to right, #69c33b 0%, #69c33b ' + g / 2.55 + '%,  white 0%)';
-        this.sliderB.style.background= 'linear-gradient(to right, #41a5ff 0%, #41a5ff ' +  b / 2.55 + '%,  white 0%)'
+        this.setColorBarr()
         this.sliderValue() 
         
        
